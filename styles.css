@@ -1036,7 +1036,6 @@ br.typing-break {
     br.typing-break {
         display: block;
         content: "";
-        margin-bottom: 0.3em;
     }
      .about-content .right .text {
         white-space: normal;
