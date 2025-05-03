@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing Animation (check if elements exist)
     if (document.querySelector('.typing')) {
         const typed = new Typed('.typing', {
-            strings: ['Software Engineer', 'Web Developer', 'IoT Developer', 'Mobile App Developer', 'Creative'],
+            strings: ['Software Engineer', 'Web Developer', 'IoT Developer', 'Mobile App Developer', 'Content Creator'], 
             typeSpeed: 80, // Slightly faster
             backSpeed: 50,
             loop: true,
