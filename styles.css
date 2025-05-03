@@ -2,8 +2,8 @@
 :root {
     --primary-color: #0f3460;
     --secondary-color: #16213e;
-    --accent-color: #533483;
-    --text-color: #f1f1f1;
+    --accent-color: #533483; 
+    --text-color: #f1f1f1;   
     --text-secondary: #b8b8b8;
     --bg-color: #1a1a2e;
     --card-bg: #16213e;
@@ -27,7 +27,7 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
 }
-body.no-scroll { /* Added to prevent scroll when mobile menu is open */
+body.no-scroll { 
     overflow: hidden;
 }
 
@@ -42,7 +42,7 @@ section {
     padding: 80px 0;
 }
 
-.title { /* Use .title as per HTML */
+.title { 
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     font-weight: 700;
@@ -52,7 +52,7 @@ section {
     color: var(--text-color);
 }
 
-.title::after { /* Use .title as per HTML */
+.title::after { 
     content: '';
     position: absolute;
     width: 80px;
@@ -115,10 +115,30 @@ section {
     text-decoration: none;
 }
 
+.logo a:link,
+.logo a:visited {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.logo a:hover,
+.logo a:active {
+   color: var(--text-color);
+   text-decoration: none;
+}
+
 .logo a span {
     color: var(--accent-color);
     transition: all 0.3s ease;
 }
+
+.logo a:link span,
+.logo a:visited span {
+    color: var(--accent-color);
+}
+ .logo a:hover span,
+ .logo a:active span {
+    color: var(--accent-color);
+ }
 
 .navbar ul {
     display: flex;
@@ -134,9 +154,9 @@ section {
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease; 
     position: relative;
-    padding-bottom: 5px; /* Add padding for the underline */
+    padding-bottom: 5px;
 }
 
 .navbar ul li a::after {
@@ -145,7 +165,7 @@ section {
     width: 0;
     height: 2px;
     background: var(--accent-color);
-    bottom: 0; /* Position at the bottom of the padding */
+    bottom: 0; 
     left: 0;
     transition: width 0.3s ease;
 }
@@ -350,6 +370,7 @@ section {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .about-content .right .text span { color: var(--accent-color); }
@@ -360,7 +381,6 @@ section {
     line-height: 1.7;
 }
 
-/* Skills Section Styles */
 .skills .title { margin-bottom: 60px; }
 
 .skills-content {
@@ -747,6 +767,7 @@ section {
     cursor: not-allowed;
 }
 
+/* Footer Styles */
 footer {
     background: var(--primary-color);
     padding: 25px 0;
@@ -755,10 +776,10 @@ footer {
 
 footer .container {
     display: flex;
-    justify-content: space-between; /* Positions items at ends */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
-    gap: 15px;       /* Adds space when items wrap */
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 footer span {
@@ -778,7 +799,7 @@ footer span a:hover { color: var(--text-color); }
 footer .social-icons {
     display: flex;
     gap: 15px;
-    flex-shrink: 0; /* Prevent icons from shrinking */
+    flex-shrink: 0;
 }
 
 footer .social-icons a {
@@ -801,6 +822,7 @@ footer .social-icons a:hover {
     color: var(--text-color);
     transform: translateY(-3px);
 }
+
 
 /* Scroll Up Button */
 .scroll-up-btn {
@@ -836,7 +858,7 @@ footer .social-icons a:hover {
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -898,7 +920,6 @@ footer .social-icons a:hover {
     to {opacity: 1;}
 }
 
-/* Form Status Message (Alternative to Modal) */
 .form-status {
     padding: 15px;
     margin: 20px 0;
@@ -986,10 +1007,10 @@ footer .social-icons a:hover {
 
     .about-content .left img { margin: 0 auto; }
 
-    .skills-content .left { order: 1; margin-bottom: 40px; } /* Text first */
-    .skills-content .right { order: 2; } /* Skills second */
-    .contact-content .left { order: 2; margin-bottom: 40px; } /* Info second */
-    .contact-content .right { order: 1; } /* Form first */
+    .skills-content .left { order: 1; margin-bottom: 40px; } 
+    .skills-content .right { order: 2; } 
+    .contact-content .left { order: 2; margin-bottom: 40px; } 
+    .contact-content .right { order: 1; }
 }
 
 @media (max-width: 768px) {
@@ -1022,17 +1043,19 @@ footer .social-icons a:hover {
     .navbar ul li a { font-size: 18px; }
     .navbar ul li a::after { bottom: -8px; }
 
-    /* Adjust contact form fields for smaller screens */
+    .about-content .right .text span.typing-2 {
+        display: block; 
+    }
+
     .contact-content form .fields {
-        gap: 0; /* Remove gap if stacking */
-        flex-direction: column; /* Stack Name/Email */
-        margin-bottom: 0; /* Remove margin as fields below have it */
+        gap: 0; 
+        flex-direction: column; 
+        margin-bottom: 0; 
     }
      .contact-content form .fields .field {
-        min-width: 100%; /* Make Name/Email full width when stacked */
-        margin-bottom: 20px; /* Add margin between stacked Name/Email */
+        min-width: 100%; 
+        margin-bottom: 20px;
      }
-     /* Subject and Textarea are already handled by the direct child rule */
 
 }
 
@@ -1055,21 +1078,19 @@ footer .social-icons a:hover {
     }
     .timeline-date { font-size: 12px; padding: 4px 8px; }
 
-    /* Updated Footer Responsive Rule */
+    /* Footer Responsive Rule */
     footer .container {
-        justify-content: center; /* Center items when they stack */
+        justify-content: center; 
         flex-direction: column;
         gap: 20px;
     }
     footer span {
-        order: 2; /* Text below icons */
-        text-align: center; /* Center text when stacked */
+        order: 2; 
+        text-align: center; 
     }
     footer .social-icons {
-        order: 1; /* Icons above text */
+        order: 1; 
     }
-    /* End Updated Footer Rule */
-
 
     .modal-content { padding: 30px 20px; }
     .modal-content h2 { font-size: 20px; }
