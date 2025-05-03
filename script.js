@@ -1,17 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
     const menuBtn = document.querySelector('.menu-btn');
     const navbar = document.querySelector('.navbar');
-    const body = document.body; 
+    const body = document.body;
 
     menuBtn.addEventListener('click', function() {
         navbar.classList.toggle('active');
         menuBtn.querySelector('i').classList.toggle('fa-times');
-        menuBtn.querySelector('i').classList.toggle('fa-bars'); 
-        body.classList.toggle('no-scroll'); 
+        menuBtn.querySelector('i').classList.toggle('fa-bars');
+        body.classList.toggle('no-scroll');
     });
 
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function() {
             if (navbar.classList.contains('active')) {
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close mobile menu when clicking outside of it
     document.addEventListener('click', function(event) {
         const isClickInsideNavbar = navbar.contains(event.target);
         const isClickOnMenuButton = menuBtn.contains(event.target);
@@ -37,16 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Sticky Header
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.header');
         header.classList.toggle('sticky', window.scrollY > 20);
     });
 
-    // Typing Animation (check if elements exist)
     if (document.querySelector('.typing')) {
         const typed = new Typed('.typing', {
-            strings: ['Software Engineer', 'Web Developer', 'IoT Developer', 'Mobile App Developer', 'Content Creator'], 
+            strings: ['Software Engineer', 'Web Developer', 'IoT Developer', 'Mobile App Developer', 'Content Creator'],
             typeSpeed: 80,
             backSpeed: 50,
             loop: true,
@@ -74,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
             reset: false
         });
 
-        // General reveals
         sr.reveal('.title', { origin: 'top' });
         sr.reveal('.home-content .text-1', { delay: 200 });
         sr.reveal('.home-content .text-2', { delay: 300 });
@@ -82,11 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
         sr.reveal('.home-content .btn, .home-content .social-icons', { delay: 500 });
         sr.reveal('.home-image', { delay: 300, origin: 'right' });
 
-        // Section reveals
         sr.reveal('.about-content .left, .skills-content .right, .contact-content .left', { origin: 'left' });
         sr.reveal('.about-content .right, .skills-content .left, .contact-content .right', { origin: 'right' });
 
-        // Staggered reveals
         sr.reveal('.projects-content .card', { interval: 150 });
         sr.reveal('.timeline-item', { interval: 150 });
         sr.reveal('.skills-content .right .bars', { interval: 100, origin: 'right' });
@@ -96,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // Active Link on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -128,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveLink();
 
 
-    // Scroll to Top Button
     const scrollBtn = document.querySelector('.scroll-up-btn');
 
     if(scrollBtn){
@@ -149,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form Submission
     const contactForm = document.querySelector('.contact-form');
     const successModal = document.getElementById('successModal');
     const closeModal = document.querySelector('.close-modal');
@@ -221,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!closeModal) console.warn('Close modal button (.close-modal) not found.');
     }
 
-    // Update copyright year automatically
     const yearElement = document.querySelector('.current-year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();

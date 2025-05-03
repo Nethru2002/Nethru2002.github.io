@@ -1,9 +1,8 @@
-/* Global Styles */
 :root {
     --primary-color: #0f3460;
     --secondary-color: #16213e;
     --accent-color: #533483;
-    --text-color: #f1f1f1;   
+    --text-color: #f1f1f1;
     --text-secondary: #b8b8b8;
     --bg-color: #1a1a2e;
     --card-bg: #16213e;
@@ -27,7 +26,7 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
 }
-body.no-scroll { 
+body.no-scroll {
     overflow: hidden;
 }
 
@@ -52,7 +51,7 @@ section {
     color: var(--text-color);
 }
 
-.title::after { 
+.title::after {
     content: '';
     position: absolute;
     width: 80px;
@@ -83,7 +82,6 @@ section {
     background: none;
 }
 
-/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -109,7 +107,7 @@ section {
 }
 
 .logo a {
-    color: var(--text-color); 
+    color: var(--text-color);
     font-size: 30px;
     font-weight: 700;
     text-decoration: none;
@@ -117,7 +115,7 @@ section {
 
 .logo a:link,
 .logo a:visited {
-    color: var(--text-color); 
+    color: var(--text-color);
     text-decoration: none;
 }
 .logo a:hover,
@@ -127,8 +125,8 @@ section {
 }
 
 .logo a span {
-    color: var(--accent-color); 
-    transition: all 0.3s ease; 
+    color: var(--accent-color);
+    transition: all 0.3s ease;
 }
 
 .logo a:link span,
@@ -187,7 +185,6 @@ section {
     display: none;
 }
 
-/* Home Section Styles */
 .home {
     min-height: 100vh;
     display: flex;
@@ -342,7 +339,6 @@ section {
     100% { transform: rotate(360deg); }
 }
 
-/* About Section Styles */
 .about .title { margin-bottom: 60px; }
 
 .about-content {
@@ -381,7 +377,6 @@ section {
     line-height: 1.7;
 }
 
-/* Skills Section Styles */
 .skills .title { margin-bottom: 60px; }
 
 .skills-content {
@@ -440,7 +435,6 @@ section {
     transition: width 0.5s ease-out;
 }
 
-/* Skills Widths */
 .skills-content .right .java::before { width: 85%; }
 .skills-content .right .python::before { width: 80%; }
 .skills-content .right .html::before { width: 90%; }
@@ -455,8 +449,6 @@ section {
 .skills-content .right .arduino::before { width: 75%; }
 .skills-content .right .tableau::before { width: 60%; }
 
-
-/* Projects Section Styles */
 .projects .title { margin-bottom: 60px; }
 
 .projects-content {
@@ -538,7 +530,6 @@ section {
     font-weight: 500;
 }
 
-/* Education Section Styles */
 .education .title { margin-bottom: 60px; }
 
 .timeline {
@@ -645,7 +636,6 @@ section {
 
 .timeline-content p:last-child { margin-bottom: 0; }
 
-/* Contact Section Styles */
 .contact .title { margin-bottom: 60px; }
 
 .contact-content {
@@ -697,7 +687,6 @@ section {
     font-size: 14px;
 }
 
-/* Contact Form Field Layout */
 .contact-content form .fields {
     display: flex;
     flex-wrap: wrap;
@@ -768,7 +757,6 @@ section {
     cursor: not-allowed;
 }
 
-/* Footer Styles */
 footer {
     background: var(--primary-color);
     padding: 25px 0;
@@ -824,7 +812,7 @@ footer .social-icons a:hover {
     transform: translateY(-3px);
 }
 
-/* Scroll Up Button */
+
 .scroll-up-btn {
     position: fixed;
     bottom: 30px;
@@ -856,7 +844,6 @@ footer .social-icons a:hover {
     transform: translateY(-5px);
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -941,7 +928,10 @@ footer .social-icons a:hover {
     display: block;
 }
 
-/* Responsive Styles */
+br.typing-break {
+    display: none;
+}
+
 @media (max-width: 1100px) {
     .container { padding: 0 30px; }
 
@@ -1043,6 +1033,15 @@ footer .social-icons a:hover {
     .navbar ul li a { font-size: 18px; }
     .navbar ul li a::after { bottom: -8px; }
 
+    br.typing-break {
+        display: block;
+        content: "";
+        margin-top: -0.6em;
+    }
+     .about-content .right .text {
+        white-space: normal;
+    }
+
     .contact-content form .fields {
         gap: 0;
         flex-direction: column;
@@ -1052,6 +1051,7 @@ footer .social-icons a:hover {
         min-width: 100%;
         margin-bottom: 20px;
      }
+
 }
 
 @media (max-width: 576px) {
@@ -1073,7 +1073,6 @@ footer .social-icons a:hover {
     }
     .timeline-date { font-size: 12px; padding: 4px 8px; }
 
-    /* Footer Responsive Rule */
     footer .container {
         justify-content: center;
         flex-direction: column;
