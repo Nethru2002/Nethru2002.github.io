@@ -437,17 +437,40 @@ section {
 
 .skills-content .right .java::before { width: 85%; }
 .skills-content .right .python::before { width: 80%; }
+.skills-content .right .cpp::before { width: 75%; }
+.skills-content .right .csharp::before { width: 75%; }
+.skills-content .right .dart::before { width: 70%; }
+.skills-content .right .php::before { width: 70%; }
+.skills-content .right .c_lang::before { width: 65%; }
 .skills-content .right .html::before { width: 90%; }
 .skills-content .right .javascript::before { width: 75%; }
 .skills-content .right .react::before { width: 70%; }
+.skills-content .right .nodejs::before { width: 65%; }
+.skills-content .right .springboot::before { width: 60%; }
+.skills-content .right .tailwind::before { width: 65%; }
+.skills-content .right .dotnet::before { width: 70%; }
 .skills-content .right .sql::before { width: 80%; }
-.skills-content .right .flutter::before { width: 65%; }
 .skills-content .right .mysql::before { width: 80%; }
+.skills-content .right .mongodb::before { width: 70%; }
+.skills-content .right .sqlite::before { width: 70%; }
+.skills-content .right .oracle::before { width: 60%; }
+.skills-content .right .flutter::before { width: 65%; }
+.skills-content .right .androidkotlin::before { width: 70%; }
 .skills-content .right .bootstrap::before { width: 70%; }
 .skills-content .right .git::before { width: 90%; }
+.skills-content .right .githubactions::before { width: 60%; }
 .skills-content .right .firebase::before { width: 65%; }
 .skills-content .right .arduino::before { width: 75%; }
+.skills-content .right .embedded::before { width: 70%; }
+.skills-content .right .pandas::before { width: 75%; }
 .skills-content .right .tableau::before { width: 60%; }
+.skills-content .right .gui::before { width: 70%; }
+.skills-content .right .figma::before { width: 70%; }
+.skills-content .right .postman::before { width: 80%; }
+.skills-content .right .dsa::before { width: 75%; }
+.skills-content .right .oop::before { width: 85%; }
+.skills-content .right .apidev::before { width: 70%; }
+
 
 .projects .title { margin-bottom: 60px; }
 
