@@ -1,486 +1,434 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nethru Wickramasekara | Software Engineer</title>
+    <title>Nethru Wickramasekara | Futuristic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner-container">
+                 <div class="loading-spinner"></div>
+            </div>
+            <div class="loading-text">Initializing Portfolio Interface...</div>
+            <div class="loading-progress">0%</div>
+        </div>
+    </div>
+
+    <!-- AI Assistant Button -->
+    <div class="ai-assistant-btn">
+        <i class="fas fa-robot"></i>
+        <span class="tooltip-ai">AI Assistant</span>
+    </div>
+
+    <!-- AI Assistant Panel -->
+    <div class="ai-assistant-panel">
+        <div class="ai-header">
+            <h3>AI Portfolio Assistant</h3>
+            <button class="close-ai"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-conversation">
+            <div class="ai-message">
+                <div class="ai-avatar ai-robot-avatar"><i class="fas fa-robot"></i></div>
+                <div class="ai-text">Hello! I'm your AI assistant. How can I help you explore Nethru's portfolio? (Try 'Show me projects')</div>
+            </div>
+        </div>
+        <div class="ai-input-area">
+            <input type="text" placeholder="Ask about Nethru..." class="ai-text-input">
+            <button class="ai-voice" title="Voice Command"><i class="fas fa-microphone"></i></button>
+            <button class="ai-send" title="Send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
             <div class="logo">
-                <a href="#">N<span>W</span></a>
+                <a href="#">
+                    <span class="logo-main">N<span class="logo-accent">W</span></span>
+                    <span class="logo-subtitle">Portfolio</span>
+                </a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#home" class="nav-link active"><span class="nav-icon"><i class="fas fa-home"></i></span><span class="nav-text">Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><span class="nav-icon"><i class="fas fa-user-astronaut"></i></span><span class="nav-text">About</span></a></li>
+                    <li><a href="#skills" class="nav-link"><span class="nav-icon"><i class="fas fa-cogs"></i></span><span class="nav-text">Skills</span></a></li>
+                    <li><a href="#projects" class="nav-link"><span class="nav-icon"><i class="fas fa-atom"></i></span><span class="nav-text">Projects</span></a></li>
+                    <li><a href="#education" class="nav-link"><span class="nav-icon"><i class="fas fa-graduation-cap"></i></span><span class="nav-text">Education</span></a></li>
+                    <li><a href="#contact" class="nav-link"><span class="nav-icon"><i class="fas fa-satellite-dish"></i></span><span class="nav-text">Contact</span></a></li>
                 </ul>
                 <div class="menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch">
+                <label for="theme-switch" class="theme-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="theme-ball"></span>
+                </label>
+            </div>
         </div>
     </header>
 
-    <section class="home" id="home">
-        <div class="container">
-            <div class="home-content">
-                <div class="text-1">Hello, I'm</div>
-                <div class="text-2">Nethru Wickramasekara</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#contact" class="btn hire-me-btn">Hire Me</a>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/nethru-wickramasekara?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Nethru2002" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    <a href="https://www.facebook.com/share/1CAwH9skFd/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/nethru_randev?utm_source=qr&igsh=bzRrNnRiY3M3MWIz" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <main>
+        <section class="home" id="home">
+            <div id="vanta-hero-bg"></div>
+            <div class="container home-container">
+                <div class="home-content">
+                    <div class="text-1 animate__animated animate__fadeInUp">Hello, I'm</div>
+                    <div class="text-2 animate__animated animate__fadeInUp animate__delay-0.5s">Nethru Wickramasekara</div>
+                    <div class="text-3 animate__animated animate__fadeInUp animate__delay-1s">And I'm a <span class="typing"></span></div>
+                    <div class="btn-container animate__animated animate__fadeInUp animate__delay-1.5s">
+                        <a href="#contact" class="btn btn-primary hire-me-btn">
+                            <span>Hire Me</span> <i class="fas fa-rocket"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary projects-btn">
+                           <span>View Projects</span> <i class="fas fa-briefcase"></i>
+                        </a>
+                    </div>
+                    <div class="social-icons-home animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="https://www.linkedin.com/in/nethru-wickramasekara" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Nethru2002" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/share/1CAwH9skFd/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nethru_randev" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="visitor-counter-container animate__animated animate__fadeInUp animate__delay-2.5s">
+                        <i class="fas fa-users"></i>
+                        <span class="counter-number">0</span> visitors on this terminal
+                    </div>
+                </div>
+                <div class="home-image-container animate__animated animate__fadeInRight animate__delay-1s">
+                    <div class="home-image-wrapper">
+                        <div class="image-bg-glow"></div>
+                        <img src="images/480575692_1359738138796336_6749226109955031562_n.jpg" alt="Nethru Wickramasekara" class="home-profile-img">
+                    </div>
                 </div>
             </div>
-            <div class="home-image">
-                <div class="img-box">
-                    <img src="images/480575692_1359738138796336_6749226109955031562_n.jpg" alt="Nethru Wickramasekara">
-                    <div class="liquid-shape"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#about" class="scroll-down-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="title">About Me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="images\WhatsApp Image 2025-05-21 at 20.34.12_b1524c6b.jpg" alt="About Netthru">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm Nethru and I'm a <br class="typing-break"> <span class="typing-2"></span></div>
-                    <p>Software Engineering Undergraduate with expertise in Database Management Systems, Web Development, Electronics, and Mobile App Development. Building a strong foundation in software engineering through coursework and personal projects, leveraging Object-Oriented Programming and IoT technologies to design innovative solutions.</p>
-                    <p>Passionate about game development and exploring creative ways to blend technology with engaging user experiences. Seeking to apply technical skills and gain practical experience in a collaborative environment.</p>
-                    <p>I am also a skilled creative professional with experience in video editing, photo editing, content creation, and music production. I focus on delivering high-quality work that captures attention and communicates effectively across different platforms.</p>
-                    <a href="CV.pdf" class="btn" download>Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="title">My Skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
-                    <p>I have developed a diverse skill set through my academic studies and personal projects. My technical expertise spans across multiple programming languages, web, desktop, and mobile development frameworks, database management systems, cloud platforms, IoT technologies, DevOps tools, and data analytics tools. I also have a strong understanding of core software engineering concepts like Data Structures, Algorithms, OOP, and API Development.</p>
-                    <p>I'm constantly learning new technologies and frameworks to stay updated with the latest trends in software development. Proficient with tools like Git/GitHub for version control and experienced with cloud services and various development environments like VS Code, IntelliJ IDEA, and Android Studio.</p>
-                    <a href="#projects" class="btn">See my projects</a>
-                </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info"><span>Java</span><span>85%</span></div>
-                        <div class="line java"></div>
+        <section class="about section-padding" id="about">
+            <div class="container">
+                <h2 class="section-title"><span>01</span>About Me</h2>
+                <div class="about-content">
+                    <div class="column left about-image-column">
+                        <div class="about-image-card">
+                            <img src="images/WhatsApp Image 2025-05-21 at 20.34.12_b1524c6b.jpg" alt="About Nethru" class="about-image">
+                            <div class="about-image-overlay">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                        </div>
+                        <div class="about-facts">
+                            <div class="fact-card">
+                                <i class="fas fa-tasks"></i>
+                                <div class="fact-text">50+ Projects</div>
+                                <span class="fact-subtext">Completed & Ongoing</span>
+                            </div>
+                            <div class="fact-card">
+                                <i class="fas fa-history"></i>
+                                <div class="fact-text">5+ Years</div>
+                                <span class="fact-subtext">Experience</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info"><span>Python</span><span>80%</span></div>
-                        <div class="line python"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>C++</span><span>75%</span></div>
-                        <div class="line cpp"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>C#</span><span>75%</span></div>
-                        <div class="line csharp"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Dart</span><span>70%</span></div>
-                        <div class="line dart"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>PHP</span><span>70%</span></div>
-                        <div class="line php"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>C</span><span>65%</span></div>
-                        <div class="line c_lang"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>HTML/CSS</span><span>90%</span></div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>JavaScript (ES6+)</span><span>75%</span></div>
-                        <div class="line javascript"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>ReactJS</span><span>70%</span></div>
-                        <div class="line react"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Node.js</span><span>65%</span></div>
-                        <div class="line nodejs"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Spring Boot</span><span>60%</span></div>
-                        <div class="line springboot"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Tailwind CSS</span><span>65%</span></div>
-                        <div class="line tailwind"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>.NET Framework</span><span>70%</span></div>
-                        <div class="line dotnet"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>SQL</span><span>80%</span></div>
-                        <div class="line sql"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>MySQL</span><span>80%</span></div>
-                        <div class="line mysql"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>MongoDB</span><span>70%</span></div>
-                        <div class="line mongodb"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>SQLite</span><span>70%</span></div>
-                        <div class="line sqlite"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Oracle DB</span><span>60%</span></div>
-                        <div class="line oracle"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Flutter</span><span>65%</span></div>
-                        <div class="line flutter"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>Android Native (Kotlin)</span><span>70%</span></div>
-                        <div class="line androidkotlin"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Bootstrap</span><span>70%</span></div>
-                        <div class="line bootstrap"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Git/GitHub</span><span>90%</span></div>
-                        <div class="line git"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>GitHub Actions</span><span>60%</span></div>
-                        <div class="line githubactions"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Firebase</span><span>65%</span></div>
-                        <div class="line firebase"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Arduino/C++ (IoT)</span><span>75%</span></div>
-                        <div class="line arduino"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>Embedded Systems</span><span>70%</span></div>
-                        <div class="line embedded"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Pandas (Data Analysis)</span><span>75%</span></div>
-                        <div class="line pandas"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Tableau</span><span>60%</span></div>
-                        <div class="line tableau"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>GUI Development</span><span>70%</span></div>
-                        <div class="line gui"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Figma</span><span>70%</span></div>
-                        <div class="line figma"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>Postman</span><span>80%</span></div>
-                        <div class="line postman"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>Data Structures & Algorithms</span><span>75%</span></div>
-                        <div class="line dsa"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info"><span>OOP Concepts</span><span>85%</span></div>
-                        <div class="line oop"></div>
-                    </div>
-                     <div class="bars">
-                        <div class="info"><span>API Development</span><span>70%</span></div>
-                        <div class="line apidev"></div>
+                    <div class="column right about-text-column">
+                        <h3 class="about-subtitle">I'm Nethru, a <span class="typing-2"></span></h3>
+                        <p>Software Engineering Undergraduate with expertise in Database Management Systems, Web Development, Electronics, and Mobile App Development. Building a strong foundation in software engineering through coursework and personal projects, leveraging Object-Oriented Programming and IoT technologies to design innovative solutions.</p>
+                        <p>Passionate about game development and exploring creative ways to blend technology with engaging user experiences. Seeking to apply technical skills and gain practical experience in a collaborative environment.</p>
+                        <p>I am also a skilled creative professional with experience in video editing, photo editing, content creation, and music production. I focus on delivering high-quality work that captures attention and communicates effectively across different platforms.</p>
+                        <div class="about-btns">
+                            <a href="CV.pdf" class="btn btn-primary download-cv-btn" download>
+                                <span>Download CV</span> <i class="fas fa-file-download"></i>
+                            </a>
+                            <button class="btn btn-secondary fun-fact-btn">
+                               <span>Fun Fact</span> <i class="fas fa-lightbulb"></i>
+                            </button>
+                        </div>
+                        <p id="funFactDisplay" class="fun-fact-text-display"></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="title">My Projects</h2>
-            <div class="projects-content">
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img"><img src="images\2096367.jpg" alt="Video Games Data Analytics Platform"></div>
-                        <div class="text">Video Games Data Analytics Platform</div>
-                        <p>Designed and implemented a comprehensive data analytics pipeline processing 71,716 video game records for market trend analysis. Performed extensive data cleaning (Python Pandas), built a scalable data warehouse (Google BigQuery), and developed interactive Tableau dashboards. Created advanced data models and integrated an end-to-end data pipeline.</p>
-                        <div class="project-tech"><span>Python</span><span>Google BigQuery</span><span>Tableau</span><span>Pandas</span><span>SQL</span><span>Data Warehousing</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img"><img src="images\R.jpg" alt="Automatic Rice Cooker"></div>
-                        <div class="text">Automatic Rice Cooker</div>
-                        <p>Designed and implemented an IoT-enabled rice cooker with Arduino. Created a smart kitchen appliance that can be controlled remotely and monitors cooking progress.</p>
-                        <div class="project-tech"><span>Arduino</span><span>IoT</span><span>C++</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img"><img src="images\Screenshot 2025-05-03 181743.png" alt="Rare Crop Home - Agricultural Product Exchange System"></div>
-                        <div class="text">Rare Crop Home - Agricultural Product Exchange System</div>
-                        <p>Designed and developed a comprehensive web-based agricultural product exchange platform connecting farmers directly with customers for rare crop trading and distribution. Implemented a full-stack solution using PHP backend, MySQL database, and responsive Bootstrap 5 frontend. Features include user management, product management with CRUD, inventory tracking, shopping cart, order processing, and secure payment gateway.</p>
-                        <div class="project-tech"><span>PHP</span><span>MySQL</span><span>Bootstrap 5</span><span>JavaScript</span><span>HTML/CSS</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img"><img src="images\wp8232052-creativity-4k-wallpapers.jpg" alt="EcoPulse - Environmental Impact Tracker"></div>
-                        <div class="text">EcoPulse - Environmental Impact Tracker</div>
-                        <p>Designed and developed a comprehensive desktop application to help users monitor and minimize their environmental impact including carbon footprint, water consumption, and waste generation. Implemented MVC architecture, SQLite database, Material Design UI, gamification, and social networking features.</p>
-                        <div class="project-tech"><span>C#</span><span>.NET Framework</span><span>SQLite</span><span>Visual Studio</span><span>Material Design</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img"><img src="images\maxresdefault.jpg" alt="4-Way Traffic Light System"></div>
-                        <div class="text">4-Way Traffic Light System</div>
-                        <p>Designed and developed a 4-way traffic light system with optimized timing algorithms. Enhanced traffic management by simulating real-world scenarios.</p>
-                        <div class="project-tech"><span>Arduino</span><span>Embedded Systems</span><span>C++</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img">
-                            <img src="images\a-logo-for-ceylon-creations-with-the-tex_yCmMJomdQ_CUG0ZHM3Z_1Q_8Ud3ZqZDQWe5_2Jpg1PlZw.jpeg" alt="Ceylon Creations">
-                        </div>
-                        <div class="text">Ceylon Creations</div>
-                        <p>Developed a full-stack Fair Trade web platform connecting Sri Lankan artisans directly with global consumers, promoting cultural heritage and fair pricing. Engineered secure e-commerce functionalities, integrated crowdfunding modules, implemented JWT-based user authentication, and built a Skill Development Hub. Mapped tourism features and deployed using cloud hosting (AWS/Google Cloud) with MongoDB Atlas.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>MongoDB</span>
-                            <span>JWT</span>
-                            <span>Bootstrap</span>
+        <section class="skills section-padding" id="skills">
+            <div class="container">
+                <h2 class="section-title"><span>02</span>My Skills Matrix</h2>
+                <div class="skills-content">
+                    <div class="column left skills-description-column">
+                        <h3 class="skills-subtitle">Creative Toolkit & Technical Proficiency</h3>
+                        <p>I have cultivated a versatile skill set through rigorous academic pursuits and hands-on personal projects. My technical arsenal spans multiple programming languages, modern web and mobile development frameworks, robust database management systems, cloud computing platforms, cutting-edge IoT technologies, efficient DevOps tools, and insightful data analytics methodologies.</p>
+                        <p>Committed to perpetual learning, I actively explore emerging technologies and frameworks to remain at the forefront of software development trends. Proficient with Git/GitHub for version control, and experienced with cloud services alongside diverse development environments like VS Code, IntelliJ IDEA, and Android Studio.</p>
+                        <div class="skills-visualization-toggle">
+                            <button class="visualization-btn active" data-view="radar"><i class="fas fa-bullseye"></i> Radar View</button>
+                            <button class="visualization-btn" data-view="bars"><i class="fas fa-align-left"></i> Bar View</button>
+                            <button class="visualization-btn" data-view="grid"><i class="fas fa-th-large"></i> Grid View</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img">
-                            <img src="images\BEST-LIBRARY-AUTOMATION-SOFTWARE-min.png" alt="Library Management System">
-                        </div>
-                        <div class="text">Library Management System</div>
-                        <p>Designed and developed a comprehensive library management system using SQL for efficient operations and resource management. Created ER diagrams, implemented a normalized database structure with 9 interconnected tables, and developed DDL/DML operations.</p>
-                        <div class="project-tech">
-                            <span>SQL</span>
-                            <span>Database Design</span>
-                            <span>ER Modeling</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img">
-                            <img src="images\images_stores_Cambridge_CambridgeSLIDER_laptop.jpg" alt="Computer Shop Management System">
-                        </div>
-                        <div class="text">Computer Shop Management System</div>
-                        <p>Designed and developed a comprehensive computer shop management system with complete database schema mapping and logical design for efficient business operations. Built an intuitive GUI application with 9 specialized forms, role-based access control, inventory management, and payment processing.</p>
-                        <div class="project-tech">
-                            <span>GUI Development</span>
-                            <span>Database Design</span>
-                            <span>Schema Mapping</span>
-                            <span>ER Modeling</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img">
-                            <img src="images\f1045490-7420-4c0d-9a7a-a0bc57dcbd07-cover.png" alt="PetCare Mobile App">
-                        </div>
-                        <div class="text">PetCare</div>
-                        <p>Developed a comprehensive mobile application using native Android with Kotlin for digital pet health record management. Integrated Firebase Authentication, Google Maps SDK, Room Database, Retrofit, and Glide. Features include dual-user interface for pet owners and veterinarians, offline data storage, and GPS-based veterinarian search.</p>
-                        <div class="project-tech">
-                            <span>Android Native</span>
-                            <span>Kotlin</span>
-                            <span>Firebase</span>
-                            <span>Google Maps</span>
-                            <span>Room DB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="project-img">
-                            <img src="images\1_57y22gCTcHbOfwsy5d1iVQ.jpg" alt="Customer Purchase Prediction">
-                        </div>
-                        <div class="text">Customer Purchase Prediction</div>
-                        <p>Developed a predictive machine learning model to analyze customer purchasing behavior and forecast product category preferences using Python and scikit-learn. Implemented and compared four machine learning algorithms (K-Means, KNN, Decision Tree, Logistic Regression), performed extensive EDA, and developed a web-based interface for model deployment.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                            <span>Machine Learning</span>
-                            <span>Data Analysis</span>
+                    <div class="column right skills-chart-column">
+                        <div class="skills-visualization-container">
+                            <div class="skills-radar-chart">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                            <div class="skills-bars" style="display: none;">
+                                {/* Skill bars will be generated by JavaScript */}
+                            </div>
+                            <div class="skills-grid" style="display: none;">
+                                {/* Skill grid will be generated by JavaScript */}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="education" id="education">
-        <div class="container">
-            <h2 class="title">My Education</h2>
-            <div class="education-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">05/2024 – present</div>
-                        <div class="timeline-content">
-                            <h3>BSc (Hons) Computing – Second Year [Higher Diploma in Software Engineering]</h3>
-                            <p>National Institute of Business Management (NIBM)</p>
-                            <p>Galle, Sri Lanka</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">03/2023 – 04/2024</div>
-                        <div class="timeline-content">
-                            <h3>Diploma in Software Engineering</h3>
-                            <p>National Institute of Business Management (NIBM)</p>
-                            <p>Galle, Sri Lanka</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023</div>
-                        <div class="timeline-content">
-                            <h3>Advanced Level Examination (A/L)</h3>
-                            <p>Richmond College</p>
-                            <p>Physical Science Stream - Results: 3S</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2018</div>
-                        <div class="timeline-content">
-                            <h3>Ordinary Level Examination (O/L)</h3>
-                            <p>Richmond College</p>
-                            <p>Results: 8A 1B</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2006 - 2023</div>
-                        <div class="timeline-content">
-                            <h3>Primary and Secondary Education</h3>
-                            <p>Richmond College, Completed studies from Grade 1 to Grade 13</p>
+        <section class="projects section-padding" id="projects">
+            <div class="container">
+                <h2 class="section-title"><span>03</span>Project Showcase</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="iot">IoT Systems</button>
+                    <button class="filter-btn" data-filter="desktop">Desktop Apps</button>
+                    <button class="filter-btn" data-filter="data">Data/ML</button>
+                </div>
+                <div class="projects-content">
+                    <p class="projects-loading-message">Loading projects...</p>
+                </div>
+                <div class="project-modal">
+                    <div class="project-modal-content-wrapper">
+                        <div class="project-modal-content">
+                            <span class="close-modal">×</span>
+                            <div class="modal-body"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Feel free to reach out to me for any questions or opportunities. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info"><div class="head">Name</div><div class="sub-title">Nethru Wickramasekara</div></div>
+        <section class="education section-padding" id="education">
+            <div class="container">
+                <h2 class="section-title"><span>04</span>Educational Trajectory</h2>
+                <div class="education-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">05/2024 – present</div>
+                            <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="timeline-content-wrapper">
+                                <h3>BSc (Hons) Computing – Second Year [Higher Diploma in Software Engineering]</h3>
+                                <p class="institution">National Institute of Business Management (NIBM)</p>
+                                <p class="location">Galle, Sri Lanka</p>
+                            </div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info"><div class="head">Address</div><div class="sub-title">399/7, Wakwella Road, Galle</div></div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">03/2023 – 04/2024</div>
+                            <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="timeline-content-wrapper">
+                                <h3>Diploma in Software Engineering</h3>
+                                <p class="institution">National Institute of Business Management (NIBM)</p>
+                                <p class="location">Galle, Sri Lanka</p>
+                            </div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info"><div class="head">Email</div><div class="sub-title">wickramasekaranethru@gmail.com</div></div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023</div>
+                             <div class="timeline-icon"><i class="fas fa-school"></i></div>
+                            <div class="timeline-content-wrapper">
+                                <h3>Advanced Level Examination (A/L)</h3>
+                                <p class="institution">Richmond College</p>
+                                <p class="details">Physical Science Stream - Results: 3S</p>
+                            </div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-phone"></i>
-                            <div class="info"><div class="head">Phone</div><div class="sub-title">0720560125 / 0713964397</div></div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2018</div>
+                            <div class="timeline-icon"><i class="fas fa-award"></i></div>
+                            <div class="timeline-content-wrapper">
+                                <h3>Ordinary Level Examination (O/L)</h3>
+                                <p class="institution">Richmond College</p>
+                                <p class="details">Results: 8A 1B</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2006 - 2023</div>
+                            <div class="timeline-icon"><i class="fas fa-user-graduate"></i></div>
+                            <div class="timeline-content-wrapper">
+                                <h3>Primary and Secondary Education</h3>
+                                <p class="institution">Richmond College</p>
+                                <p class="details">Completed studies from Grade 1 to Grade 13</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="column right">
-                    <div class="text">Message me</div>
-                    <form action="https://formsubmit.co/wickramasekaranethru@gmail.com" method="POST" class="contact-form">
-                        <input type="hidden" name="_subject" value="New contact from portfolio website!">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_captcha" value="false">
+            </div>
+        </section>
 
-                        <div class="fields">
-                            <div class="field name"><input type="text" name="name" placeholder="Name" required></div>
-                            <div class="field email"><input type="email" name="email" placeholder="Email" required></div>
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <h2 class="section-title"><span>05</span>Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="column left contact-info-column">
+                        <h3 class="contact-subtitle">Let's Connect & Innovate</h3>
+                        <p>I'm always excited to discuss new projects, pioneering ideas, or opportunities to contribute to your vision. Feel free to reach out!</p>
+                        <div class="contact-info-cards">
+                            <div class="info-card">
+                                <div class="info-icon"><i class="fas fa-user-circle"></i></div>
+                                <div class="info-details">
+                                    <div class="info-title">Name</div>
+                                    <div class="info-value">Nethru Wickramasekara</div>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                <div class="info-details">
+                                    <div class="info-title">Address</div>
+                                    <div class="info-value">399/7, Wakwella Road, Galle</div>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon"><i class="fas fa-envelope-open-text"></i></div>
+                                <div class="info-details">
+                                    <div class="info-title">Email</div>
+                                    <div class="info-value"><a href="mailto:wickramasekaranethru@gmail.com">wickramasekaranethru@gmail.com</a></div>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="info-details">
+                                    <div class="info-title">Phone</div>
+                                    <div class="info-value"><a href="tel:0720560125">0720560125</a> / <a href="tel:0713964397">0713964397</a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                        <div class="contact-map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7937.016709106395!2d80.21710804279984!3d6.035636786980257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173c1c72a480b%3A0x3153c20a07c67938!2sWakwella%20Rd%2C%20Galle!5e0!3m2!1sen!2slk!4v1678888888888!5m2!1sen!2slk" width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <div class="field textarea">
-                            <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="button">
-                            <button type="submit">Send message</button>
-                        </div>
+                    </div>
+                    <div class="column right contact-form-column">
+                        <h3 class="contact-subtitle">Send a Direct Message</h3>
+                        <form action="https://formsubmit.co/wickramasekaranethru@gmail.com" method="POST" class="contact-form" id="contactForm">
+                            <input type="hidden" name="_subject" value="New Contact from Portfolio Website!">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://nethru2002.github.io/Portfolio/thank-you.html"> 
+
+                            <div class="form-group-grid">
+                                <div class="form-field">
+                                    <input type="text" name="name" id="name" required placeholder=" ">
+                                    <label for="name">Full Name</label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="email" name="email" id="email" required placeholder=" ">
+                                    <label for="email">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <input type="text" name="subject" id="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-field">
+                                <textarea name="message" id="message" rows="5" required placeholder=" "></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary submit-btn">
+                                    <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <a href="#">N<span class="logo-accent">W</span> <span class="logo-subtitle-footer">Creations</span></a>
+                    </div>
+                    <p>Crafting innovative digital solutions and immersive user experiences for a dynamic world. Passionate about technology and creativity.</p>
+                     <div class="social-icons-footer">
+                        <a href="https://www.linkedin.com/in/nethru-wickramasekara" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Nethru2002" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/share/1CAwH9skFd/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nethru_randev" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-angle-right"></i> About</a></li>
+                        <li><a href="#skills"><i class="fas fa-angle-right"></i> Skills</a></li>
+                        <li><a href="#projects"><i class="fas fa-angle-right"></i> Projects</a></li>
+                        <li><a href="#education"><i class="fas fa-angle-right"></i> Education</a></li>
+                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact-info">
+                    <h3>Contact Details</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>399/7, Wakwella Road, Galle, Sri Lanka</span></li>
+                        <li><i class="fas fa-phone"></i> <span><a href="tel:0720560125">0720560125</a> / <a href="tel:0713964397">0713964397</a></span></li>
+                        <li><i class="fas fa-envelope"></i> <span><a href="mailto:wickramasekaranethru@gmail.com">wickramasekaranethru@gmail.com</a></span></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe for updates (Feature coming soon!).</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Enter your email..." disabled>
+                        <button type="submit" disabled><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <span>Created By <a href="#">Nethru Wickramasekara</a> | <span class="far fa-copyright"></span> <span class="current-year"></span> All rights reserved.</span>
-            <div class="social-icons">
-                 <a href="https://www.linkedin.com/in/nethru-wickramasekara?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                 <a href="https://github.com/Nethru2002" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                 <a href="https://www.facebook.com/share/1CAwH9skFd/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                 <a href="https://www.instagram.com/nethru_randev?utm_source=qr&igsh=bzRrNnRiY3M3MWIz" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © <span class="current-year"></span> Nethru Wickramasekara. All Rights Reserved. Designed with <i class="fas fa-heart"></i>.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+        <i class="fas fa-angle-double-up"></i>
     </div>
 
     <div class="modal" id="successModal">
-        <div class="modal-content">
-            <span class="close-modal">×</span>
-            <i class="fas fa-check-circle"></i>
-            <h2>Thank You!</h2>
-            <p>Your message has been sent successfully. I'll get back to you soon.</p>
+        <div class="success-modal-content">
+            <span class="close-modal-icon success-close-modal-trigger">×</span>
+            <div class="modal-icon">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h2>Message Sent!</h2>
+            <p>Thank you! Your message has been successfully transmitted. I'll get back to you shortly.</p>
+            <button class="btn btn-primary modal-close-btn success-close-modal-trigger">Roger That!</button>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
