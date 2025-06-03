@@ -294,13 +294,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 "skills": "Nethru commands a versatile tech stack including Java, Python, C++, JavaScript, Flutter, SQL, and cloud platforms. The 'Skills Matrix' section offers a visual breakdown of his expertise.",
                 "projects": "Nethru's portfolio features diverse projects such as a Video Games Data Analytics Platform, an IoT Smart Rice Cooker, and an AgriGrow Exchange web platform. Navigate to 'Project Showcase' for an interactive view.",
                 "education": "Nethru is advancing his BSc (Hons) in Computing at NIBM, Galle, building upon a Diploma in Software Engineering. His foundational education was at Richmond College. The 'Educational Trajectory' section has specifics.",
+                "experience": "Nethru is currently an Intern Software Engineer at SLT-MOBITEL in the Digital Platform Division. You can find more details in the 'Work Experience' section.",
                 "contact": "To connect with Nethru, please use the 'Get in Touch' section. His primary email is wickramasekaranethru@gmail.com, and phone lines are 0720560125 / 0713964397.",
                 "resume": "Nethru's comprehensive CV is available for download in the 'About Me' section via the 'Download CV' button.",
                 "cv": "Nethru's comprehensive CV is available for download in the 'About Me' section via the 'Download CV' button.",
                 "thank you": "You're most welcome! Can I assist with anything further?",
                 "thanks": "My pleasure! Feel free to ask more questions.",
                 "bye": "Farewell! Enjoy your exploration of Nethru's digital domain.",
-                "default": "My apologies, I'm still calibrating my understanding for that query. Try asking about 'skills', 'projects', or 'how to contact Nethru'."
+                "default": "My apologies, I'm still calibrating my understanding for that query. Try asking about 'skills', 'projects', 'experience' or 'how to contact Nethru'."
             };
 
             function addMessageToConversation(text, isUser = false) {
@@ -321,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "skills": ["skill", "what can he do", "technologies", "expertise", "proficient"],
                     "projects": ["project", "work", "portfolio item", "case studies", "showcase"],
                     "education": ["education", "study", "degree", "school", "academic"],
+                    "experience": ["experience", "job", "internship", "work history", "slt"],
                     "contact": ["contact", "email", "phone", "reach him", "connect"],
                     "resume": ["cv", "resume", "download cv", "curriculum vitae"],
                     "hello": ["hello", "hi", "hey", "greetings", "good day"],
