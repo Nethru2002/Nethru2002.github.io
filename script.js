@@ -227,7 +227,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (response.ok || (response.type === 'opaque' && response.status === 0) ) { 
                         return Promise.resolve(); 
                     }
-                    return response.text().then(text => Promise.reject(new Error(text || `Server error: ${response.status}`)));
+                    return response.text().then(text => { 
+                        let errorMessage = `Form submission failed. Status: ${response.status}`;
+                        if (text) {
+                           try {
+                               const jsonData = JSON.parse(text); 
+                               errorMessage = jsonData.message || jsonData.error || text;
+                           } catch (e_parse) {
+                               errorMessage = text.substring(0,100); 
+                           }
+                        }
+                        return Promise.reject(new Error(errorMessage));
+                    });
                 })
                 .then(() => { 
                     successModal.style.display = 'flex'; 
@@ -253,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const closeTheSuccessModal = () => {
                 successModal.style.display = 'none'; 
                 body.classList.remove('no-scroll');
+                contactForm.reset(); 
             };
             successCloseTriggers.forEach(trigger => trigger.addEventListener('click', closeTheSuccessModal));
             window.addEventListener('click', (event) => {
