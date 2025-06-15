@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: 1, title: "Video Games Data Analytics Platform",
                 shortDescription: "End-to-end analytics pipeline for 70k+ game records for market trend insights using Python, BigQuery, and Tableau.",
                 description: "Designed and implemented a comprehensive data analytics pipeline processing 71,716 video game records for market trend analysis. Performed extensive data cleaning (Python Pandas), built a scalable data warehouse (Google BigQuery), and developed interactive Tableau dashboards. Created advanced data models and integrated an end-to-end data pipeline.",
-                image: "images/project_video_games_analytics.jpg",
+                image: "images/2096367.jpg",
                 technologies: ["Python", "Google BigQuery", "Tableau", "Pandas", "SQL", "ETL"],
                 category: "data",
                 details: {
@@ -436,13 +436,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Python (Pandas, NumPy), Google BigQuery, SQL, Tableau, Data Warehousing Principles, ETL Processes.",
                     "Challenges & Innovative Solutions": "Efficiently managed large-scale dataset processing. Ensured high data integrity via robust validation. Designed intuitive, user-centric dashboards for complex data interpretation."
                 },
-                links: [{ text: "Explore on GitHub", url: "https://github.com/Nethru2002/Video-Games-Data-Analytics-Platform", icon: "fab fa-github" }]
             },
             {
                 id: 2, title: "IoT Smart Rice Cooker",
                 shortDescription: "Arduino-based IoT rice cooker with remote mobile app control and real-time cooking status monitoring.",
                 description: "Engineered an IoT-enabled smart rice cooker utilizing Arduino. This intelligent kitchen appliance offers remote control via a mobile application and provides real-time monitoring of the cooking cycle, significantly enhancing user convenience and cooking precision.",
-                image: "images/project_rice_cooker.jpg",
+                image: "images/R.jpg",
                 technologies: ["Arduino", "C++ (Embedded)", "IoT Protocols", "Sensors", "Firebase"],
                 category: "iot",
                 details: {
@@ -451,13 +450,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Arduino (ESP32/ESP8266), C++ for embedded systems, MQTT/HTTP communication, Temperature & Moisture Sensors, Firebase for backend and app connectivity.",
                     "Learning & Outcomes": "Developed expertise in embedded systems, sensor data acquisition, IoT device communication, and fundamental Man-Machine Interface (MMI) design for mobile applications."
                 },
-                links: [{ text: "Code on GitHub", url: "https://github.com/Nethru2002/Automatic_Rice_Cooker", icon: "fab fa-github" }]
             },
             {
                 id: 3, title: "Rare Crop Home - Agricultural Product Exchange System",
                 shortDescription: "Full-stack web platform connecting farmers and consumers for rare crop trading using PHP, MySQL, and Bootstrap.",
                 description: "Designed and developed a comprehensive web-based agricultural product exchange platform connecting farmers directly with customers for rare crop trading and distribution. Implemented a full-stack solution using PHP backend, MySQL database, and responsive Bootstrap 5 frontend. Features include user management, product management with CRUD, inventory tracking, shopping cart, order processing, and secure payment gateway.",
-                image: "images/project_rare_crop_home.jpg",
+                image: "images/Screenshot 2025-05-03 181743.png",
                 technologies: ["PHP", "MySQL", "Bootstrap 5", "JavaScript", "HTML/CSS"],
                 category: "web",
                 details: {
@@ -466,13 +464,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Backend: PHP. Database: MySQL. Frontend: HTML, CSS, JavaScript, Bootstrap 5.",
                     "Project Goal": "To create a dedicated marketplace for rare agricultural products, empowering small-scale farmers and providing consumers access to a wider variety of produce."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 4, title: "EcoPulse - Environmental Impact Tracker",
                 shortDescription: "Desktop app for monitoring carbon footprint, water usage, and waste, featuring MVC, SQLite, and Material Design.",
                 description: "Designed and developed a comprehensive desktop application to help users monitor and minimize their environmental impact including carbon footprint, water consumption, and waste generation. Implemented MVC architecture, SQLite database, Material Design UI, gamification, and social networking features.",
-                image: "images/project_ecopulse.jpg",
+                image: "images/wp8232052-creativity-4k-wallpapers.jpg",
                 technologies: ["C#", ".NET Framework", "SQLite", "Material Design", "MVC"],
                 category: "desktop",
                 details: {
@@ -481,13 +478,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "C#, .NET Framework (Windows Forms or WPF), SQLite, Material Design libraries (e.g., MaterialSkin), Charting libraries.",
                     "Impact Goal": "To raise awareness about individual environmental contributions and provide tools for users to make more sustainable lifestyle choices."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 5, title: "4-Way Traffic Light System",
                 shortDescription: "Arduino-based 4-way traffic light system with optimized timing algorithms for enhanced traffic simulation.",
                 description: "Designed and developed a 4-way traffic light system with optimized timing algorithms. Enhanced traffic management by simulating real-world scenarios.",
-                image: "images/project_traffic_light.jpg",
+                image: "images/maxresdefault.jpg",
                 technologies: ["Arduino", "Embedded Systems", "C++"],
                 category: "iot",
                 details: {
@@ -496,13 +492,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Arduino (Uno/Nano or similar), C++, LEDs, Resistors, Breadboard, Jumper Wires.",
                     "Learning Focus": "Understanding embedded system programming, real-time control logic, hardware-software interaction, and traffic management principles at a basic level."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 6, title: "Ceylon Creations",
                 shortDescription: "Full-stack Fair Trade web platform connecting Sri Lankan artisans with global consumers using MERN stack and cloud deployment.",
                 description: "Developed a full-stack Fair Trade web platform connecting Sri Lankan artisans directly with global consumers, promoting cultural heritage and fair pricing. Engineered secure e-commerce functionalities, integrated crowdfunding modules, implemented JWT-based user authentication, and built a Skill Development Hub. Mapped tourism features and deployed using cloud hosting (AWS/Google Cloud) with MongoDB Atlas.",
-                image: "images/project_ceylon_creations.png",
+                image: "images/a-logo-for-ceylon-creations-with-the-tex_yCmMJomdQ_CUG0ZHM3Z_1Q_8Ud3ZqZDQWe5_2Jpg1PlZw.jpeg",
                 technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Bootstrap", "AWS/GCP"],
                 category: "web",
                 details: {
@@ -511,13 +506,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Frontend: React.js, Bootstrap. Backend: Node.js, Express.js. Database: MongoDB (Atlas). Authentication: JSON Web Tokens (JWT). Cloud: AWS or Google Cloud Platform.",
                     "Objective": "To create a sustainable online ecosystem that supports Sri Lankan artisans by providing market access, fair compensation, and opportunities for skill enhancement, while offering consumers authentic, ethically sourced products."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 7, title: "Library Management System",
                 shortDescription: "SQL-based desktop system for efficient library operations, featuring ER diagrams and normalized database design.",
                 description: "Designed and developed a comprehensive library management system using SQL for efficient operations and resource management. Created ER diagrams, implemented a normalized database structure with 9 interconnected tables, and developed DDL/DML operations.",
-                image: "images/project_library_management.png",
+                image: "images/BEST-LIBRARY-AUTOMATION-SOFTWARE-min.png",
                 technologies: ["SQL", "Database Design", "ER Modeling", "MySQL", "Java/C# (GUI)"],
                 category: "desktop",
                 details: {
@@ -526,13 +520,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Database: SQL (MySQL). Backend Logic/GUI: Java (Swing/JavaFX) or C# (WinForms/WPF).",
                     "Focus": "Efficient data management, relational database design principles, and core library operational workflows."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 8, title: "Computer Shop Management System",
                 shortDescription: "Desktop GUI application for computer shop operations with database mapping, inventory, and payment processing.",
                 description: "Designed and developed a comprehensive computer shop management system with complete database schema mapping and logical design for efficient business operations. Built an intuitive GUI application with 9 specialized forms, role-based access control, inventory management, and payment processing.",
-                image: "images/project_computer_shop.jpg",
+                image: "images/images_stores_Cambridge_CambridgeSLIDER_laptop.jpg",
                 technologies: ["GUI Development", "Database Design", "Java/C# (assumed)", "SQL", "Inventory Mgt"],
                 category: "desktop",
                 details: {
@@ -541,13 +534,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "GUI Framework (Java Swing/JavaFX or C# WinForms/WPF), Database (MySQL, SQLite), Reporting tools.",
                     "Objective": "To provide a user-friendly and efficient software solution for managing the day-to-day operations of a computer shop."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 9, title: "PetCare Mobile App",
                 shortDescription: "Android Kotlin app for pet health record management with Firebase, Google Maps, Room DB, and offline capabilities.",
                 description: "Developed a comprehensive mobile application using native Android with Kotlin for digital pet health record management. Integrated Firebase Authentication, Google Maps SDK, Room Database, Retrofit, and Glide. Features include dual-user interface for pet owners and veterinarians, offline data storage, and GPS-based veterinarian search.",
-                image: "images/project_petcare.png",
+                image: "images/f1045490-7420-4c0d-9a7a-a0bc57dcbd07-cover.png",
                 technologies: ["Android Native", "Kotlin", "Firebase", "Google Maps", "Room DB", "Retrofit", "Glide"],
                 category: "mobile",
                 details: {
@@ -556,13 +548,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Development Language: Kotlin. Platform: Native Android. Backend/Auth: Firebase. Local Storage: Room. Networking: Retrofit. Image Loading: Glide. Maps: Google Maps SDK.",
                     "User Value": "Provides a convenient and organized way to manage pet health, improving communication between pet owners and veterinarians and ensuring timely care."
                 },
-                links: [/* Add GitHub link if available */]
             },
             {
                 id: 10, title: "Customer Purchase Prediction (ML)",
                 shortDescription: "Python/Scikit-learn model for predicting customer purchase behavior, comparing ML algorithms with EDA and web deployment.",
                 description: "Developed a predictive machine learning model to analyze customer purchasing behavior and forecast product category preferences using Python and scikit-learn. Implemented and compared four machine learning algorithms (K-Means, KNN, Decision Tree, Logistic Regression), performed extensive EDA, and developed a web-based interface for model deployment.",
-                image: "images/project_customer_prediction.jpg",
+                image: "images/1_57y22gCTcHbOfwsy5d1iVQ.jpg",
                 technologies: ["Python", "Scikit-learn", "Machine Learning", "Pandas", "Flask/Django"],
                 category: "data",
                 details: {
@@ -571,7 +562,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     "Technologies Stack": "Programming Language: Python. ML Libraries: Scikit-learn. Data Manipulation: Pandas, NumPy. Visualization: Matplotlib, Seaborn. Web Framework (for UI): Flask or Django.",
                     "Application": "The model can be used by e-commerce businesses for personalized recommendations, targeted advertising campaigns, and optimizing stock levels."
                 },
-                links: [/* Add GitHub link if available */]
             }
         ];
 
@@ -603,7 +593,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initSkillsVisualization(skillsDataSource) {
     if (!skillsDataSource || Object.keys(skillsDataSource).length === 0) {
-        console.warn("Skills data is empty or not provided.");
         return;
     }
     const visualizationBtns = document.querySelectorAll('.visualization-btn');
@@ -612,7 +601,6 @@ function initSkillsVisualization(skillsDataSource) {
     const gridContainer = document.querySelector('.skills-grid');
 
     if (!radarChartContainer || !barsContainer || !gridContainer || !radarChartContainer.querySelector('#radarChart')) {
-        console.warn("Skill visualization containers or radarChart canvas not found.");
         return;
     }
     
@@ -648,7 +636,6 @@ function initSkillsVisualization(skillsDataSource) {
 
 function createRadarChart(skillsDataSource, canvasElement) {
     if (!canvasElement || typeof Chart === 'undefined') {
-        console.warn("Radar chart canvas or Chart.js not found.");
         return;
     }
     const ctx = canvasElement.getContext('2d');
